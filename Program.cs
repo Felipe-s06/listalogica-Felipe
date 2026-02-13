@@ -38,15 +38,34 @@
 #endregion
 
 #region 4. Verificador de Maioridade
-Console.Write("Digite sua idade:");
-int idade = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Digite sua idade:");
+//int idade = Convert.ToInt32(Console.ReadLine());
 
-if (idade >= 18)
+//if (idade >= 18)
+//{
+//    Console.WriteLine("Entrada autorizada.");
+//}
+//else
+//{
+//    Console.WriteLine("Entrada não autorizada.");
+//}
+#endregion
+
+#region 5. Classificador de Número
+Console.Write("Digite um núemro para classificação: ");
+int Numero = Convert.ToInt32(Console.ReadLine());
+
+if (Numero % 2 == 0 && Numero >= 0)
 {
-    Console.WriteLine("Entrada autorizada.");
+    Console.WriteLine($"{Numero} é Par e Positivo");
+}
+else if (Numero % 2 != 0 && Numero >= 0)
+{
+    Console.WriteLine($"{Numero} é Ímpar e Positivo.");
 }
 else
 {
-    Console.WriteLine("Entrada não autorizada.");
+    Console.WriteLine($"{Numero} é Negativo.");
 }
+
 #endregion
