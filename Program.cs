@@ -23,17 +23,27 @@
 #endregion
 
 #region 3. Troca de Valores
-//int Numero1 = 10;
-//int Numero2 = 16;
-//Console.WriteLine($"O primeiro número é {Numero1} e o segundo núemro é {Numero2}.\n");
+int Numero1 = 10;
+int Numero2 = 16;
+Console.WriteLine($"O primeiro número é {Numero1} e o segundo número é {Numero2}.\n");
 
-//Console.Write($"Digite 'Troca' para fazer as trocas do números: ");
-//Console.ReadLine();
-//int Numero3 = Numero1;
-//Numero1 = Numero2;
-//Numero2 = Numero3;
+Console.Write($"Digite 'Trocar' para fazer as trocas do números: ");
+string Verificacao = Console.ReadLine();
 
-//Console.WriteLine($"\nAgora o primeiro número é {Numero1} e o segundo núemro é {Numero2}.");
+
+if (Verificacao.ToLower() == "trocar")
+{
+    int Numero3 = Numero1;
+    Numero1 = Numero2;
+    Numero2 = Numero3;
+    Console.WriteLine($"\nSucesso na troca!\n Agora o primeiro número é {Numero1} e o segundo núemro é {Numero2}.");
+
+}
+else
+{
+    Console.WriteLine("\nFalha!\nA troca não foi feita.");
+}
+
 
 #endregion
 
@@ -52,20 +62,20 @@
 #endregion
 
 #region 5. Classificador de Número
-Console.Write("Digite um núemro para classificação: ");
-int Numero = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Digite um núemro para classificação: ");
+//int Numero = Convert.ToInt32(Console.ReadLine());
 
-if (Numero % 2 == 0 && Numero >= 0)
-{
-    Console.WriteLine($"{Numero} é Par e Positivo");
-}
-else if (Numero % 2 != 0 && Numero >= 0)
-{
-    Console.WriteLine($"{Numero} é Ímpar e Positivo.");
-}
-else
-{
-    Console.WriteLine($"{Numero} é Negativo.");
-}
+//if (Numero % 2 == 0 && Numero >= 0)
+//{
+//    Console.WriteLine($"{Numero} é Par e Positivo");
+//}
+//else if (Numero % 2 != 0 && Numero >= 0)
+//{
+//    Console.WriteLine($"{Numero} é Ímpar e Positivo.");
+//}
+//else
+//{
+//    Console.WriteLine($"{Numero} é Negativo.");
+//}
 
 #endregion
