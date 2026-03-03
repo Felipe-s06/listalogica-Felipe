@@ -23,28 +23,26 @@
 #endregion
 
 #region 3. Troca de Valores
-int Numero1 = 10;
-int Numero2 = 16;
-Console.WriteLine($"O primeiro número é {Numero1} e o segundo número é {Numero2}.\n");
+//int Numero1 = 10;
+//int Numero2 = 16;
+//Console.WriteLine($"O primeiro número é {Numero1} e o segundo número é {Numero2}.\n");
 
-Console.Write($"Digite 'Trocar' para fazer as trocas do números: ");
-string Verificacao = Console.ReadLine();
-
-
-if (Verificacao.ToLower() == "trocar")
-{
-    int Numero3 = Numero1;
-    Numero1 = Numero2;
-    Numero2 = Numero3;
-    Console.WriteLine($"\nSucesso na troca!\n Agora o primeiro número é {Numero1} e o segundo núemro é {Numero2}.");
-
-}
-else
-{
-    Console.WriteLine("\nFalha!\nA troca não foi feita.");
-}
+//Console.Write($"Digite 'Trocar' para fazer as trocas do números: ");
+//string Verificacao = Console.ReadLine();
 
 
+//if (Verificacao.ToLower() == "trocar")
+//{
+//    int Numero3 = Numero1;
+//    Numero1 = Numero2;
+//    Numero2 = Numero3;
+//    Console.WriteLine($"\nSucesso na troca!\n Agora o primeiro número é {Numero1} e o segundo número é {Numero2}.");
+
+//}
+//else
+//{
+//    Console.WriteLine("\nFalha!\nA troca não foi feita.");
+//}
 #endregion
 
 #region 4. Verificador de Maioridade
@@ -78,4 +76,32 @@ else
 //    Console.WriteLine($"{Numero} é Negativo.");
 //}
 
+#endregion
+
+#region 6. Validação de Login Simples 
+//string usuario_correto = "admin";
+//string senha_correta = "12345";
+
+//Console.Write("Digite o nome de usuário: ");
+//string usuario_input = Console.ReadLine();
+
+//Console.Write("Digite a senha: ");
+//string senha_input = Console.ReadLine();
+
+//if (usuario_input == usuario_correto && senha_input == senha_correta)
+//{
+//    Console.WriteLine("Login efetuado com sucesso!");
+//}
+//else
+//{
+//    Console.WriteLine("Usuário ou senha inválidos.");
+//}
+#endregion
+
+#region 7. Contagem Regressiva 
+for (int i = 10; i >= 1; i--)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine("Lançar!");
 #endregion
