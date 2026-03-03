@@ -99,9 +99,40 @@
 #endregion
 
 #region 7. Contagem Regressiva 
-for (int i = 10; i >= 1; i--)
+//for (int i = 10; i >= 1; i--)
+//{
+//    Console.WriteLine(i);
+//}
+//Console.WriteLine("Lançar!");
+#endregion
+
+#region 8. Soma de Ímpares
+//int soma = 0;
+//int numero;
+
+//Console.WriteLine("Digite números (0 para parar):");
+
+//while (true)
+//{
+//    numero = int.Parse(Console.ReadLine());
+
+//    if (numero == 0) break; 
+
+//    if (numero % 2 != 0)
+//    {
+//        soma += numero;
+//    }
+//}
+
+//Console.WriteLine($"A soma total dos números ímpares é: {soma}");
+#endregion
+
+#region 9. Tabuada Personalizada
+Console.Write("Digite um número inteiro para ver a tabuada: ");
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= 10; i++)
 {
-    Console.WriteLine(i);
+    Console.WriteLine($"{n} x {i} = {n * i}");
 }
-Console.WriteLine("Lançar!");
 #endregion
