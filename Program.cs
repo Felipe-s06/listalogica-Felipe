@@ -128,11 +128,49 @@
 #endregion
 
 #region 9. Tabuada Personalizada
-Console.Write("Digite um número inteiro para ver a tabuada: ");
-int n = int.Parse(Console.ReadLine());
+//Console.Write("Digite um número inteiro para ver a tabuada: ");
+//int n = int.Parse(Console.ReadLine());
 
-for (int i = 1; i <= 10; i++)
+//for (int i = 1; i <= 10; i++)
+//{
+//    Console.WriteLine($"{n} x {i} = {n * i}");
+//}
+#endregion
+
+#region 10. Inversão de Array
+//string[] nomes = { "Ana", "Bruno", "Carlos", "Diana", "Eduardo" };
+
+//Console.WriteLine("Lista Original (usando for):");
+
+//for (int i = 0; i < nomes.Length; i++)
+//{
+//    Console.WriteLine(nomes[i]);
+//}
+
+//Console.WriteLine("\nLista Invertida (usando for):");
+
+//for (int i = nomes.Length - 1; i >= 0; i--)
+//{
+//    Console.WriteLine(nomes[i]);
+//}
+#endregion
+
+#region 11. Busca e Contagem em Lista
+List<string> cores = new List<string> { "Azul", "Vermelho", "Azul", "Verde", "Amarelo", "Azul", "Verde" };
+
+Console.Write("Digite uma cor para buscar: ");
+string busca = Console.ReadLine();
+
+int contador = 0;
+
+foreach (string cor in cores)
 {
-    Console.WriteLine($"{n} x {i} = {n * i}");
+    
+    if (cor.Equals(busca, StringComparison.OrdinalIgnoreCase))
+    {
+        contador++;
+    }
 }
+
+Console.WriteLine($"A cor '{busca}' aparece {contador} vezes na lista.");
 #endregion
