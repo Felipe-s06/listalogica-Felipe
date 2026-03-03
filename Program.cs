@@ -156,21 +156,74 @@
 #endregion
 
 #region 11. Busca e Contagem em Lista
-List<string> cores = new List<string> { "Azul", "Vermelho", "Azul", "Verde", "Amarelo", "Azul", "Verde" };
+//List<string> cores = new List<string> { "Azul", "Vermelho", "Azul", "Verde", "Amarelo", "Azul", "Verde" };
 
-Console.Write("Digite uma cor para buscar: ");
-string busca = Console.ReadLine();
+//Console.Write("Digite uma cor para buscar: ");
+//string busca = Console.ReadLine();
 
-int contador = 0;
+//int contador = 0;
 
-foreach (string cor in cores)
-{
+//foreach (string cor in cores)
+//{
     
-    if (cor.Equals(busca, StringComparison.OrdinalIgnoreCase))
+//    if (cor.Equals(busca, StringComparison.OrdinalIgnoreCase))
+//    {
+//        contador++;
+//    }
+//}
+
+//Console.WriteLine($"A cor '{busca}' aparece {contador} vezes na lista.");
+#endregion
+
+#region 12. Gerenciador de Tarefas Simples
+List<string> tarefas = new List<string>();
+string opcao = "";
+
+// Loop para manter o programa em execução até que o usuário escolha "3" (Sair)
+while (opcao != "3")
+{
+    // Exibição do Menu
+    Console.WriteLine("\n--- GERENCIADOR DE TAREFAS ---");
+    Console.WriteLine("1. Adicionar Tarefa");
+    Console.WriteLine("2. Listar Tarefas");
+    Console.WriteLine("3. Sair");
+    Console.Write("Escolha uma opção: ");
+
+    opcao = Console.ReadLine();
+
+    // Switch para tratar as opções do menu
+    switch (opcao)
     {
-        contador++;
+        case "1":
+            Console.Write("Digite a descrição da tarefa: ");
+            string novaTarefa = Console.ReadLine();
+            tarefas.Add(novaTarefa); // Adiciona na lista
+            Console.WriteLine("Tarefa adicionada com sucesso!");
+            break;
+
+        case "2":
+            Console.WriteLine("\n--- LISTA DE TAREFAS ---");
+            if (tarefas.Count == 0)
+            {
+                Console.WriteLine("Nenhuma tarefa cadastrada.");
+            }
+            else
+            {
+                // Usando o loop for (sem foreach) para listar
+                for (int i = 0; i < tarefas.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {tarefas[i]}");
+                }
+            }
+            break;
+
+        case "3":
+            Console.WriteLine("Encerrando o programa...");
+            break;
+
+        default:
+            Console.WriteLine("Opção inválida! Tente novamente.");
+            break;
     }
 }
-
-Console.WriteLine($"A cor '{busca}' aparece {contador} vezes na lista.");
 #endregion
